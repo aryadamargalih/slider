@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animasi Slider</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,900;1,100;1,400;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <div class="slider">
+      <div class="list">
+        <div class="item">
+          <img src="img/1.jpg" alt="image 1" />
+          <div class="detail">
+            <div class="title">Mobile Legend</div>
+            <div class="name name-lancelot">Lancelot</div>
+            <figure>
+              <img src="img/avatar/1.png" alt="avatar 1" />
+              <figcaption>Assassin</figcaption>
+            </figure>
+            <div class="desc">
+              Prodigal son and genius swordsman of House Baroque.
+            </div>
+            <a href="#" class="more">More details &raquo;</a>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/2.jpg" alt="image 2" />
+          <div class="detail">
+            <div class="title">Mobile Legend</div>
+            <div class="name name-alpha">Alpha</div>
+            <figure>
+              <img src="img/avatar/2.png" alt="avatar 1" />
+              <figcaption>Fighter</figcaption>
+            </figure>
+            <div class="desc">A pure cyborg made by laboratory 1718</div>
+            <a href="#" class="more">More details &raquo;</a>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/3.jpg" alt="image 3" />
+          <div class="detail">
+            <div class="title">Mobile Legend</div>
+            <div class="name name-lunox">Lunox</div>
+            <figure>
+              <img src="img/avatar/4.png" alt="avatar 1" />
+              <figcaption>Mage</figcaption>
+            </figure>
+            <div class="desc">A miraculous creature born in Twilight Orb</div>
+            <a href="#" class="more">More details &raquo;</a>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/4.jpg" alt="image 3" />
+          <div class="detail">
+            <div class="title">Mobile Legend</div>
+            <div class="name name-selena">Selena</div>
+            <figure>
+              <img src="img/avatar/4.png" alt="avatar 1" />
+              <img src="img/avatar/1.png" alt="avatar 1" />
+              <figcaption>Mage / Assassin</figcaption>
+            </figure>
+            <div class="desc">Dark Elf girl who fell into the Abyss</div>
+            <a href="#" class="more">More details &raquo;</a>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/5.jpg" alt="image 3" />
+          <div class="detail">
+            <div class="title">Mobile Legend</div>
+            <div class="name name-alucard">Alucard</div>
+            <figure>
+              <img src="img/avatar/2.png" alt="avatar 1" />
+              <img src="img/avatar/1.png" alt="avatar 1" />
+              <figcaption>Fighter / Assassin</figcaption>
+            </figure>
+            <div class="desc">Demon hunter who detests the darkness</div>
+            <a href="#" class="more">More details &raquo;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="thumbnail">
+        <div class="item">
+          <img src="img/1.jpg" alt="" />
+          <div class="detail">
+            <div class="name">Lancelot</div>
+            <blockquote>I have no sympathy to spare for evil doers</blockquote>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/2.jpg" alt="" />
+          <div class="detail">
+            <div class="name">Alpha</div>
+            <blockquote>Test, Alpha is online</blockquote>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/3.jpg" alt="" />
+          <div class="detail">
+            <div class="name">Lunox</div>
+            <blockquote>Come and join me, in my dream world</blockquote>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/4.jpg" alt="" />
+          <div class="detail">
+            <div class="name">Selena</div>
+            <blockquote>
+              (shhh…) When you gaze into the abyss, the abyss gazes back!
+            </blockquote>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/5.jpg" alt="" />
+          <div class="detail">
+            <div class="name">Alucardd</div>
+            <blockquote>
+              Nothing last's forever, we can change the future
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="arrows">
+        <button id="prev">&lt;</button>
+        <button id="next">&gt;</button>
+      </div>
+
+      <div class="loader"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
