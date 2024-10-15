@@ -6,27 +6,45 @@ body {
   font-size: 1.2rem;
 }
 
+/* Header */
 header {
   width: 1200px;
-  max-width: 80%;
+  max-width: 30%;
   margin: auto;
   height: 50px;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   z-index: 999;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
+  top: 3%;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0.7);
 }
 
 header nav {
   display: flex;
   gap: 2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 header nav a {
   text-decoration: none;
   text-transform: uppercase;
-  color: rgb(0, 0, 0);
+  color: #000;
   letter-spacing: 0.1rem;
+  font-weight: 500;
+}
+
+header:hover {
+  transform: scale(1);
+}
+
+header:hover nav {
+  opacity: 1;
 }
 
 /* Slider */
@@ -130,7 +148,7 @@ header nav a {
 }
 
 .slider .list .item .detail .desc {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   font-weight: 100;
   font-size: 1rem;
   max-width: 40rem;
@@ -139,7 +157,7 @@ header nav a {
 
 .slider .list .item .detail .more {
   display: inline-block;
-  margin-top: 1.4rem;
+  margin-top: 1rem;
   text-decoration: none;
   background-color: #fff;
   color: #000;
@@ -158,8 +176,8 @@ header nav a {
 
 .thumbnail {
   position: absolute;
-  bottom: 50px;
-  left: 45%;
+  bottom: 10px;
+  left: 23%;
   width: max-content;
   z-index: 999;
   display: flex;
@@ -178,6 +196,7 @@ header nav a {
   height: 100%;
   object-fit: cover;
   border-radius: 15px;
+  object-position: 65%;
 }
 
 .thumbnail .item .detail {
@@ -206,21 +225,31 @@ header nav a {
 
 .arrows {
   position: absolute;
-  top: 80%;
-  right: 50%;
-  width: 300px;
-  max-width: 30%;
+  top: 69%;
+  width: 100%;
   display: flex;
-  align-items: center;
-  gap: 0.8rem;
+  justify-content: space-between;
+}
+
+/* Left Button */
+.arrows #prev {
+  position: absolute;
+  background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.8));
+  left: 17%;
+}
+
+/* Right Button */
+.arrows #next {
+  position: absolute;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.8));
+  right: 17%;
 }
 
 .arrows button {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 80px;
+  height: 215px;
+  border-radius: 5px;
   border: none;
-  box-shadow: 1px 1px 1px #000;
   font-family: monospace;
   color: #ff1b6b;
   cursor: pointer;
@@ -228,8 +257,12 @@ header nav a {
   transition: 0.3s;
 }
 
-.arrows button:hover {
-  background-color: #ff1b6b;
+.arrows #next:hover {
+  background: linear-gradient(to right, transparent, rgba(255, 27, 107, 0.8));
+  color: #fff;
+}
+.arrows #prev:hover {
+  background: linear-gradient(to left, transparent, rgba(255, 27, 107, 0.8));
   color: #fff;
 }
 
@@ -279,8 +312,8 @@ header nav a {
   width: 150px;
   height: 220px;
   position: absolute;
-  left: 50%;
-  bottom: 50px;
+  left: 22.5%;
+  bottom: 10px;
   border-radius: 15px;
   animation: growImage 0.5s linear 1 forwards;
 }
@@ -337,8 +370,8 @@ header nav a {
     width: 150px;
     height: 220px;
     border-radius: 15px;
-    left: 50%;
-    bottom: 50px;
+    bottom: 10px;
+    left: 23%;
   }
 }
 
@@ -396,6 +429,57 @@ header nav a {
 }
 
 @media screen and (max-width: 678px) {
+  .slider .list .item > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 65%;
+  }
+
+  /* Header */
+  header {
+    width: 1200px;
+    max-width: 90%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50px;
+    top: 3%;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0.7);
+  }
+
+  header nav {
+    display: flex;
+    gap: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  header nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+  }
+
+  header:hover {
+    transform: scale(1);
+  }
+
+  header:hover nav {
+    opacity: 1;
+  }
+
+  .thumbnail .item:nth-child(n + 4) {
+    display: none;
+  }
   .slider .list .item .detail .name {
     font-size: 2.8rem;
     line-height: 2.8rem;
@@ -403,5 +487,101 @@ header nav a {
 
   .slider .list .item .detail .desc {
     font-size: 0.8rem;
+  }
+
+  .item .detail .name {
+    font-size: 5rem;
+  }
+
+  .item .detail blockquote {
+    display: none;
+  }
+
+  /* Thumbnail */
+
+  .thumbnail {
+    bottom: 20px;
+    left: 19%;
+    gap: 5px;
+  }
+
+  .thumbnail .item {
+    width: 80px;
+    height: 150px;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    object-position: 65%;
+  }
+
+  .thumbnail .item .detail {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    right: 10px;
+  }
+
+  .thumbnail .item .detail .name {
+    font-weight: 900;
+    font-size: 1rem;
+    text-align: right;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 1px #000;
+  }
+
+  .thumbnail .item .detail blockquote {
+    font-size: 0.7rem;
+    font-weight: 100;
+    text-align: right;
+    text-shadow: 1px 1px 1px #000;
+  }
+
+  /*Arrows*/
+
+  .arrows {
+    top: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .arrows #prev {
+    left: 0%;
+  }
+
+  .arrows #next {
+    right: 0%;
+  }
+
+  .arrows button {
+    width: 80px;
+    height: 150px;
+    z-index: 1000;
+    transition: 0.3s;
+  }
+
+  /*Next Action*/
+
+  @keyframes shrinkImage {
+    to {
+      width: 80px;
+      height: 150px;
+      border-radius: 8px;
+      bottom: 20px;
+      left: 19%;
+    }
+  }
+
+  @keyframes showThumbnail {
+    to {
+      width: 80px;
+      opacity: 1;
+    }
   }
 }
