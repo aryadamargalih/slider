@@ -477,9 +477,6 @@ header:hover nav {
     opacity: 1;
   }
 
-  .thumbnail .item:nth-child(n + 4) {
-    display: none;
-  }
   .slider .list .item .detail .name {
     font-size: 2.8rem;
     line-height: 2.8rem;
@@ -510,6 +507,10 @@ header:hover nav {
     height: 150px;
     flex-shrink: 0;
     position: relative;
+  }
+
+  .thumbnail .item:nth-child(n + 4) {
+    display: none;
   }
 
   .thumbnail .item img {
@@ -545,25 +546,7 @@ header:hover nav {
   /*Arrows*/
 
   .arrows {
-    top: 80%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .arrows #prev {
-    left: 0%;
-  }
-
-  .arrows #next {
-    right: 0%;
-  }
-
-  .arrows button {
-    width: 80px;
-    height: 150px;
-    z-index: 1000;
-    transition: 0.3s;
+    display: none;
   }
 
   /*Next Action*/

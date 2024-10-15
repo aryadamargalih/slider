@@ -3,7 +3,6 @@ const list = document.querySelector(".list");
 const thumbnail = document.querySelector(".thumbnail");
 const next = document.querySelector("#next");
 const prev = document.querySelector("#prev");
-
 //Autoplay Slider
 let runAutoPlay = setTimeout(() => {
   next.click();
